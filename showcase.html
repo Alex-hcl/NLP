@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetarium Showcase</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .navbar-brand {
+            font-size: 24px;
+        }
+        .jumbotron {
+            background-image: url('space.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        .jumbotron h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .jumbotron p {
+            font-size: 18px;
+        }
+        .fa-arrow-down {
+            color: #fff;
+            font-size: 36px;
+            margin-top: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .section {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .section h2 {
+            margin-bottom: 40px;
+        }
+        .section p {
+            font-size: 20px;
+        }
+        .planet-card {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .planet-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Planetarium</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Welcome to the Planetarium</h1>
+            <p>Explore the wonders of the universe</p>
+            <a href="#about"><i class="fas fa-arrow-down"></i></a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Discover the mysteries of space with our interactive planetarium showcase. Learn about different planets, their moons, and much more!</p>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div id="gallery" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="planet-card">
+                        <h3>Earth</h3>
+                        <p>Home to millions of species, including humans, Earth is the only planet known to support life.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="planet-card">
+                        <h3>Mars</h3>
+                        <p>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="planet-card">
+                        <h3>Jupiter</h3>
+                        <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<!-- Vue App Script -->
+<script>
+    // Your Vue.js code can be added here if needed
+</script>
+</body>
+</html>
